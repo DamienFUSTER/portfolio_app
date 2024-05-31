@@ -16,14 +16,22 @@ dropdown_parameter = dcc.Dropdown(["Rendement aux normes (q/ha)","Objectif de re
 
 graphique_scat = dcc.Graph(id = "graph_agri")
 
+input_title = dcc.Markdown("""#### Input""", className="input_title_dashboard")
+
+# ----- LAYOUT -----
 
 layout = html.Div([
     title_markdown,
     html.Div([
-        dropdown_parameter,
-        graphique_scat
+        html.Div([
+            graphique_scat
+            ],className="graph_1_dashboard"),
+        html.Div([
+            input_title,
+            dropdown_parameter
+            ], className="dropdown_input_dashboard"),
+        ])
     ])
-])
 
 @callback(
     Output(component_id="graph_agri", component_property="figure"),

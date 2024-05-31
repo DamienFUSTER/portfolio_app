@@ -23,6 +23,7 @@ def career_text():
 ### My career
 Internship CRNS
 Apprenticeship Syngenta
+![alt text](test.jpg)
 """
 
 
